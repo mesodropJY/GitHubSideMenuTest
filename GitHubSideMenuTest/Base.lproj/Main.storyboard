@@ -1,24 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pWc-ks-F9c">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Menu Table View Controller-->
+        <scene sceneID="FhX-KG-BNR">
+            <objects>
+                <tableViewController id="hNZ-xu-3Tz" customClass="MenuTableViewController" customModule="GitHubSideMenuTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tU0-xp-JNq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="usj-9f-jD7">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="套件作者：jonkykong" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdC-tU-kcE">
+                                    <rect key="frame" x="0.0" y="30" width="375" height="30"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <color key="textColor" systemColor="systemRedColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvz-2e-nd6">
+                                    <rect key="frame" x="0.0" y="60" width="375" height="90"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                    <color key="textColor" systemColor="systemTealColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Rvz-2e-nd6" secondAttribute="bottom" id="6P7-Jv-aeF"/>
+                                <constraint firstAttribute="trailing" secondItem="Rvz-2e-nd6" secondAttribute="trailing" id="JKP-9h-8Ai"/>
+                                <constraint firstItem="Rvz-2e-nd6" firstAttribute="top" secondItem="bdC-tU-kcE" secondAttribute="bottom" id="Maa-y0-VMN"/>
+                                <constraint firstItem="bdC-tU-kcE" firstAttribute="leading" secondItem="usj-9f-jD7" secondAttribute="leading" id="Osq-AA-sKJ"/>
+                                <constraint firstItem="Rvz-2e-nd6" firstAttribute="leading" secondItem="usj-9f-jD7" secondAttribute="leading" id="XZk-VE-RkQ"/>
+                                <constraint firstItem="bdC-tU-kcE" firstAttribute="top" secondItem="usj-9f-jD7" secondAttribute="top" constant="30" id="bZr-8v-7EH"/>
+                                <constraint firstAttribute="trailing" secondItem="bdC-tU-kcE" secondAttribute="trailing" id="cTV-PB-RMZ"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection id="GlU-ls-qq0">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="4J9-on-Oxw" customClass="MenuTableViewCell" customModule="GitHubSideMenuTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="174.5" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4J9-on-Oxw" id="8jF-tT-wxq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SideMenu 就是棒" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCK-4L-Akp">
+                                                    <rect key="frame" x="46" y="28" width="313" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YCK-4L-Akp" secondAttribute="trailing" id="Ehv-FP-kqd"/>
+                                                <constraint firstItem="YCK-4L-Akp" firstAttribute="leading" secondItem="8jF-tT-wxq" secondAttribute="leadingMargin" constant="30" id="RJa-LB-5jN"/>
+                                                <constraint firstItem="YCK-4L-Akp" firstAttribute="centerY" secondItem="8jF-tT-wxq" secondAttribute="centerY" id="gaI-jH-P2f"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Yl8-bn-r9S" customClass="MenuTableViewCell" customModule="GitHubSideMenuTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="254.5" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yl8-bn-r9S" id="tc6-9E-dHw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SideMenu 就是讚" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldv-rX-lr1">
+                                                    <rect key="frame" x="46" y="28" width="313" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Ldv-rX-lr1" firstAttribute="centerY" secondItem="tc6-9E-dHw" secondAttribute="centerY" id="AC1-ms-qhN"/>
+                                                <constraint firstItem="Ldv-rX-lr1" firstAttribute="leading" secondItem="tc6-9E-dHw" secondAttribute="leadingMargin" constant="30" id="W4m-nl-jpC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ldv-rX-lr1" secondAttribute="trailing" id="ej7-Bp-sfz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Kra-rI-Vb4" customClass="MenuTableViewCell" customModule="GitHubSideMenuTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="334.5" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kra-rI-Vb4" id="oBQ-j2-i7f">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SideMenu 就是好用" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iU-5d-z2S">
+                                                    <rect key="frame" x="46" y="28" width="313" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="9iU-5d-z2S" firstAttribute="leading" secondItem="oBQ-j2-i7f" secondAttribute="leadingMargin" constant="30" id="664-zE-IRw"/>
+                                                <constraint firstItem="9iU-5d-z2S" firstAttribute="centerY" secondItem="oBQ-j2-i7f" secondAttribute="centerY" id="sLN-R3-pZL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9iU-5d-z2S" secondAttribute="trailing" id="zD0-ku-Zh1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="hNZ-xu-3Tz" id="Bze-cH-bii"/>
+                            <outlet property="delegate" destination="hNZ-xu-3Tz" id="Lph-UH-Qh6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="yv3-FL-owH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FlF-Y4-fHI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="-600"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GitHubSideMenuTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ptp-eu-ySq">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aeb-JP-hw3">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="311.5"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIT-AX-p8d">
+                                        <rect key="frame" x="0.0" y="311.5" width="375" height="311.5"/>
+                                        <color key="backgroundColor" red="0.70196078429999997" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ptp-eu-ySq" secondAttribute="bottom" id="4WM-XL-lVN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ptp-eu-ySq" secondAttribute="trailing" id="gG6-Os-0XW"/>
+                            <constraint firstItem="ptp-eu-ySq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="put-F7-IJJ"/>
+                            <constraint firstItem="ptp-eu-ySq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rvc-r2-pLL"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="i0N-vT-T76">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="list.star" catalog="system" id="Gn7-bt-fG6">
+                            <connections>
+                                <segue destination="Cnm-Vc-MYB" kind="show" id="29v-u9-F4X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="945" y="42"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DCm-RJ-gJS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pWc-ks-F9c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S99-7h-XeG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="barTintColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k47-4X-vv2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvf-WR-mQt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="42"/>
+        </scene>
+        <!--Menu Navigation View Controller-->
+        <scene sceneID="PLh-W3-ufK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cnm-Vc-MYB" customClass="MenuNavigationViewController" customModule="GitHubSideMenuTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="zdU-VJ-hHo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ved-ZC-CiB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="hNZ-xu-3Tz" kind="relationship" relationship="rootViewController" id="czV-W4-viQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p0B-uQ-zD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="-600"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list.star" catalog="system" width="128" height="94"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

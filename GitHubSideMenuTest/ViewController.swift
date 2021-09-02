@@ -1,11 +1,6 @@
-//
-//  ViewController.swift
-//  GitHubSideMenuTest
-//
-//  Created by 林建羽 on 2021/9/2.
-//
 
 import UIKit
+import SideMenu
 
 class ViewController: UIViewController {
 
